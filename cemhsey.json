@@ -1,0 +1,33 @@
+{
+ "clock_only_r2": {
+  "CEMHSEY day 1 trial 5": 0.894586481346641,
+  "CEMHSEY day 2 trial 1": 0.7669368041687833,
+  "CEMHSEY day 2 trial 2": 0.8571022391922193,
+  "CEMHSEY day 2 trial 3": 0.848716621368197,
+  "CEMHSEY day 2 trial 4": 0.881644572056662,
+  "CEMHSEY day 2 trial 5": 0.9079303723761063,
+  "Hyser trial 2 (from trial 1)": -0.030053966678361244,
+  "Hyser trial 1 (from trial 2)": -0.17778795210141407
+ },
+ "time_flagged_as_pinch": {
+  "rest": 0.004371584699453552,
+  "hand close": 0.9944444444444445,
+  "hand open": 0.4533333333333333,
+  "wrist flexion": 0.035555555555555556,
+  "wrist extension": 0.7944444444444445,
+  "radial deviation": 0.5011111111111111,
+  "ulnar deviation": 0.09666666666666668,
+  "pronation": 0.01348314606741573,
+  "supination": 0.006666666666666666,
+  "2-finger pinch": 0.9922222222222222
+ },
+ "false_pinches_per_min": {
+  "rest": 0.32754898040783686,
+  "non_pinch_movements": 10.087506360459988
+ },
+ "pinches_detected": {
+  "same_day": 1.0,
+  "other_day": 0.0,
+  "n": 10
+ }
+}
