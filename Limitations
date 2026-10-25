@@ -1,0 +1,10 @@
+These experiments are deliberately **limited** in scope:
+
+A.Only one participant per dataset was examined; the results cannot establish generalization to unseen people.
+B. Hyser provides individual finger forces, not direct thumb index contact force.
+C. CEMHSEY GESTURE provides gesture labels but no measured force.
+D. The analysis covers selected experimental tests rather than the complete physiological framework.
+E. Learned neural drive representations, incontext personalization and the complete real-time robotic pipeline remain proposed research directions.
+F. Cross trial and cross day comparisons are useful preliminary checks, but do not establish clinical or robotic deployment performance.
+
+The repository is intended to demonstrate my experimental reasoning.
