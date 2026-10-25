@@ -18,3 +18,5 @@ Each figure takes one test from the plan, runs it on real HD-sEMG, and checks wh
 - Dataset: Yang S, Li D, Chen C, Zhu X. Dataset: CEMHSEY (ConsecutivE Multi-day High-density Surface ElectromyographY), Part II. Zenodo (2025). https://doi.org/10.5281/zenodo.14272463
 
 The data are not included in this repository. 
+
+**These are exploratory demonstrations**
