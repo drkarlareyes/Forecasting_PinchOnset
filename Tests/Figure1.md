@@ -1,4 +1,4 @@
-![Figure 1: sEMG comes before force (T1)](figures/figure1.png)
+![Figure 1: sEMG comes before force](../figures/figure1.png)
 
 The left panel shows an example press, comparing aggregate activity derived from 251 HD-sEMG electrodes with the measured change in finger force from rest.
 The right panel zooms in on the beginning of the press to compare the timing of the two signals.
