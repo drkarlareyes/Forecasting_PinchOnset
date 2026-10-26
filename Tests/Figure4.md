@@ -7,7 +7,9 @@ In CEMHSEY, gesture timing follows a fixed cue protocol.
 A trial from day 2 was predicted using the average activity pattern from four day 1 trials. 
 The same general time only comparison was applied to Hyser's self paced contractions.
 
-![Figure 3: Cue-only control](../figures/figure3.png)
+![Figure 4: Cue-only control](../figures/figure3.png)
+
+### Figure 4: Cue-only control
 
 - CEMHSEY (cued): Time only prediction reached R² = 0.77 on the shown day 2 trial, with R² = 0.77–0.91 across six held-out trials.
 - Hyser (self paced): Time only prediction reached R² = −0.03 in the shown direction and −0.18 in the reverse direction.
