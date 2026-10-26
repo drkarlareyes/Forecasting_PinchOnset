@@ -1,21 +1,14 @@
-![Figure 3: Calibration Calibration: steady versus changing force (T5)](../figures/figure4.png)
+![Figure 3: Influence of calibration sample selection (T5)](../figures/figure4.png)
 
-From a calibration trial, an equal number of labeled samples was selected from steady force, changing force or mixed segments. 
-The two tested calibration budgets were approximately 5.8 s and 2.1 s. 
-Model fitting was done on one trial and evaluated on the other, in both directions.
+### Figure 3. Influence of calibration sample selection (T5)
 
-(a) examines how the goodness of fit changes when the assumed EMG to force delay varies from 0 to 150 ms. 
-(b) shows prediction performance (R²) on the independent trial using different calibration sample selections.
+Using Hyser middle-finger recordings from one participant, I compared three selections of labeled samples: steady force (including rest), changing force (rising and falling), and randomly selected mixed samples. Each selection contained the same number of samples within a trial (577 or 210 samples, depending on the trial).
+Models were fitted on one trial and evaluated on the other, in both directions.
 
-The figure shows that there is delay identifiability: With steady force samples, the fit varied by only about 0.035 R² across candidate delays. 
-Changing-force samples produced a more pronounced variation of approximately 0.16–0.25 R².
+(a) The reduced physiological model showed greater sensitivity to the assumed EMG to force delay when fitted with changing force samples than with steady force samples. However, this variation in calibration fit does not establish that the true physiological delay has been identified.
 
-Steady samples gave R² = 0.65 and 0.79, compared with 0.56 and 0.70 from changing force samples. 
-Mixed samples gave 0.70 and 0.78 across the two directions.
+(b) For forecasting force 50 ms ahead, steady force samples achieved R² values of 0.65 and 0.79, compared with 0.56 and 0.70 using changing force samples. Mixed samples achieved 0.70 and 0.78.
 
-Steady-force samples can provide a useful estimate of force magnitude, 
-while changing force samples help constrain temporal parameters.
-This motivates testing short mixed protocols rather than assuming that ramps alone are optimal.
+These exploratory results suggest that calibration sample selection affects both model fitting and subsequent prediction. 
 
-The limitation is that samples were selected retrospectively from existing recordings; 
-these are not separately collected, user guided calibration sessions. 
+Big limitation is that the samples were selected retrospectively from one participant's recordings. 
