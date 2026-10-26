@@ -1,5 +1,7 @@
 ![Figure 2: Forecast against baselines](../figures/figure2.png)
 
+### Figure 2: Forecast against baselines (T2)
+
 Prediction error, expressed as a percentage of a typical press, was compared across future force horizons and three phases: 
 force rising (onset), steady force (hold) and force falling (release).
 
