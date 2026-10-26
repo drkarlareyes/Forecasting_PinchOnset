@@ -1,4 +1,4 @@
-![Figure 2: Forecast against baselines](.../figures/figure2.png)
+![Figure 2: Forecast against baselines](../figures/figure2.png)
 
 Prediction error, expressed as a percentage of a typical press, was compared across future force horizons and three phases: 
 force rising (onset), steady force (hold) and force falling (release).
@@ -15,7 +15,7 @@ the reduced physiological baseline, remained within approximately 2.5 percentage
 
 The comparison shows why forecasting performance must be reported by phase. 
 Persistence of actual measured force can be very effective during holds, 
-while EMG may be more informative about upcoming increases and decreases. 
+while sEMG may be more informative about upcoming increases and decreases. 
 A single average error could conceal this distinction.
 
 This is a small, within participant, cross trial demonstration using middle finger force, 
