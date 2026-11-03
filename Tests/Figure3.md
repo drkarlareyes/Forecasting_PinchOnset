@@ -1,4 +1,4 @@
-![Figure 3: Influence of calibration sample selection (T5)](../figures/figure4.png)
+![Figure 3: Influence of calibration sample selection (T5)](../figures/figure3.png)
 
 ### Figure 3. Influence of calibration sample selection (T5)
 
