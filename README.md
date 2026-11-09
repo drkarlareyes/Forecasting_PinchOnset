@@ -2,9 +2,14 @@
 
 Muscle electrical activity starts before the force it produces. This repository tests how far that lead can be used: can a model predict finger force tens of milliseconds ahead with information that goes beyond simply repeating the last value, and how do early pinch detection and false pinches trade off?
 
-I approach the problem as an evaluation framework of eight tests (T1 to T8). The analyses here run five of them on public HD-sEMG data. Each figure takes one test and checks whether its result would change a modelling decision. These are exploratory analyses with one participant per dataset: they show what each test can reveal, not general performance.
+I approach the problem as an evaluation framework of eight tests (T1 to T8), run on public HD-sEMG data in two stages. Each figure takes one test and checks whether its result would change a modelling decision.
+
+1. **Pilot, one participant per dataset** (Figures 1 to 5): five of the tests on Hyser and CEMHSEY, to see what each test can reveal.
+2. **Hyser, all 20 participants** (Figures 6 to 8): the timing and forecast tests repeated on everyone, plus a day-to-day test with the electrodes placed again.
 
 ## Key results
+
+### Stage 1 · Pilot, one participant per dataset
 
 | Figure | Test | Question | Result on public data |
 |---|---|---|---|
@@ -13,6 +18,14 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8). The
 | [3](Tests/Figure3.md) | T5 | Which calibration data identify the model? | Steady force left the EMG-to-force delay poorly identified (fit changed by 0.035 R² across 0 to 150 ms); changing force constrained it (0.16 to 0.25). A mixed calibration predicted best or as well (R² 0.70 and 0.78). |
 | [4](Tests/Figure4.md) | T4 | Can the task schedule alone look like anticipation? | Time since trial start alone predicted cued muscle activity with R² 0.77 to 0.91, and self-paced activity not at all (−0.03 and −0.18). |
 | [5](Tests/Figure5.md) | T7, T8 | Where do false pinches come from? | A pinch detector calibrated on pinch and rest flagged rest 0.4% of the time but hand closing 99% and wrist extension 79%. On another day, after the electrodes were re-applied, it detected 0 of 10 pinches. |
+
+### Stage 2 · Hyser, all 20 participants
+
+| Figure | Test | Question | Result on public data |
+|---|---|---|---|
+| [6](Tests/Figure6.md) | T1 | How far ahead does sEMG carry information about force? | In all 19 participants with an active middle finger, the causal sEMG features predicted force best some time ahead rather than now: median 130 ms (IQR 105 to 195 ms; 70 ms for the pilot participant). R² on the other trial rose from 0.18 at 0 ms to 0.36 at each person's best delay (medians). |
+| [7](Tests/Figure7.md) | T2 | Does the forecast beat persistence across people? | Against repeating its own estimate, the forecast's median gain during force rise was 1.4 points of a typical press at 100 ms and 3.3 to 3.7 points at 150 to 200 ms (Wilcoxon p ≤ 0.001), clear within 10 of 19 people at 150 to 200 ms. Repeating the measured force still won up to 100 ms in every phase and at all horizons during holds. |
+| [8](Tests/Figure8.md) | T8, T5 | Does a calibration survive to the next day? | No. A day-1 model fell from a median R² of 0.39 (same-day calibration) to −0.07 on day 2. Rescaling the sEMG on day 2 without force reached only 0.11. Adding 10 to 20 s of day-2 data with force to the day-1 data recovered 0.32 to 0.35; day-2 data alone needed 20 s to match. |
 
 Each linked page explains the figure, the method and its limits.
 
@@ -53,7 +66,9 @@ Each linked page explains the figure, the method and its limits.
 
 | Path | Content |
 |---|---|
-| `hyser.ipynb` | Hyser analyses: Figures 1, 2 and 3 |
+| `hyser.ipynb` | Hyser pilot, one participant: Figures 1, 2 and 3 |
+| `hyser_multisubject.ipynb` | Hyser, all 20 participants: Figures 6, 7 and 8 |
+| `download_hyser.py` | Downloads the Hyser files used by both notebooks |
 | `cemhsey.ipynb` | CEMHSEY analyses (with a Hyser comparison): Figures 4 and 5 |
 | `Tests/` | One page per figure with its explanation |
 | `figures/` | Figure images |
@@ -62,13 +77,13 @@ Each linked page explains the figure, the method and its limits.
 
 ## How to run
 
-1. Download the data (not included here, see below) into a `data/` folder.
+1. Download the data (not included here, see below) into a `data/` folder. For Hyser, `python download_hyser.py` gets the random task of all 20 participants, both sessions (about 2 GB, into `data/hyser/`).
 2. `pip install -r requirements.txt`
-3. Set `HYSER_DIR` and `CEM_DIR` in the first cell of each notebook (or as environment variables), then run all cells from the repository folder. `hyser.ipynb` takes about a minute; `cemhsey.ipynb` takes a few minutes the first time while it extracts features from the CEMHSEY files.
+3. Set `HYSER_DIR`, `HYSER_RANDOM` and `CEM_DIR` in the first cell of each notebook (or as environment variables), then run all cells from the repository folder. `hyser.ipynb` takes about a minute; `hyser_multisubject.ipynb` takes about 15 s per participant the first time and keeps the results of each person in `results/multisubject/`; `cemhsey.ipynb` takes a few minutes the first time while it extracts features from the CEMHSEY files.
 
 ## Data
 
-**Hyser** (PhysioNet `hd-semg` 2.0.0). Forearm HD-sEMG from 20 participants, 256 electrodes in four 8 × 8 grids over the extensor and flexor muscles (2048 Hz), with the force of the five fingers (100 Hz). Used here: subject 1, session 1, random task, trials 1 and 2 (self-paced finger presses).
+**Hyser** (PhysioNet `hd-semg` 2.0.0). Forearm HD-sEMG from 20 participants, 256 electrodes in four 8 × 8 grids over the extensor and flexor muscles (2048 Hz), with the force of the five fingers (100 Hz). Used here: random task (self-paced finger presses), trials 1 and 2. Stage 1: subject 1, session 1. Stage 2: subjects 1 to 20, sessions 1 and 2, recorded on separate days.
 
 - Jiang X, Dai C, Liu X, Fan J. Open Access Dataset and Toolbox of High-Density Surface Electromyogram Recordings (version 2.0.0). PhysioNet (2023). https://doi.org/10.13026/hxan-pe94
 - Jiang X, et al. Open access dataset, toolbox and benchmark processing results of high-density surface electromyogram recordings. *IEEE Transactions on Neural Systems and Rehabilitation Engineering* 29, 1035–1046 (2021). https://doi.org/10.1109/TNSRE.2021.3082551
