@@ -2,11 +2,12 @@
 
 Muscle electrical activity starts before the force it produces. This repository tests how far that lead can be used: can a model predict finger force tens of milliseconds ahead with information that goes beyond simply repeating the last value, and how do early pinch detection and false pinches trade off?
 
-I approach the problem as an evaluation framework of eight tests (T1 to T8), run on public sEMG data in three stages. Each figure takes one test and checks whether its result would change a modelling decision.
+I approach the problem as an evaluation framework of eight tests (T1 to T8), run on public sEMG data in four stages. Each figure takes one test and checks whether its result would change a modelling decision.
 
 1. **Pilot, one participant per dataset** (Figures 1 to 5): five of the tests on Hyser and CEMHSEY, to see what each test can reveal.
 2. **Hyser, all 20 participants** (Figures 6 to 8): the timing and forecast tests repeated on everyone, plus a day-to-day test with the electrodes placed again.
 3. **putEMG-Force, all 44 participants** (Figures 9 to 12): the same tests on a second dataset recorded in another lab, plus a press detector scored on about 90 presses from rest per person.
+4. **WAY-EEG-GAL, all 12 participants** (Figures 13 to 15): thumb–index grip force during whole reach, grasp, lift and release movements, with unexpected weight changes.
 
 ## Key results
 
@@ -37,6 +38,14 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8), run
 | [11](Tests/Figure11.md) | T2 | Does the forecast beat persistence in a second dataset? | In the same direction as Hyser, but smaller: during force rise the median gain over repeating its own estimate was 0.4 points of a typical press at 100 ms (clear in 37 of 44 participants) and 0.6 at 200 ms. During release the forecast was worse up to 100 ms. |
 | [12](Tests/Figure12.md) | T8, T5 | Does a calibration survive to the next session? | No. R² fell from 0.46 (same-session calibration) to −0.75. Unlike Hyser, keeping the session-1 data hurt: new-session data alone reached 0.20 with 20 s and 0.36 with 120 s; session 1 plus the same new data reached −0.12 and 0.15. |
 
+### Stage 4 · WAY-EEG-GAL, all 12 participants
+
+| Figure | Test | Question | Result on public data |
+|---|---|---|---|
+| [13](Tests/Figure13.md) | T1 | When do the arm and hand muscles become active relative to finger contact? | The shoulder and forearm muscles switched on 60 to 140 ms before the hand started moving. The first dorsal interosseous switched on 82 ms after the hand started moving, about 820 ms before contact, at a low level; its main burst came after contact (halfway to its peak at 105 ms, grip force at 225 ms). |
+| [14](Tests/Figure14.md) | T7, T1 | Does a pinch detector stay quiet during the reach? | Not at useful settings. On the two finger muscles (flexor digitorum, first dorsal interosseous), a sensitive detector (3 SD, 10 ms) had fired before the last 200 ms preceding contact in 85% of trials, with 4.1 false alarms per minute at rest. A stricter one (5 SD, 25 ms) was rarely on at rest or during the reach, but first fired after contact (median 113 ms) or not at all in 76% of trials. At no setting did more than 8% of trials first fire in the last 200 ms before contact. |
+| [15](Tests/Figure15.md) | T1, T2 | Does the forecast help with grip force and unexpected weights? | Grip force was predicted best 125 ms ahead (IQR 88 to 152 ms), with R² rising only from 0.65 to 0.66. During force rise the forecast was worse than its own estimate up to 70 ms and better at 150 to 200 ms (0.4 and 0.9 points of a typical grip). A heavier object than in the previous trial made no clear difference; a lighter one lowered the gain at every horizon. |
+
 Each linked page explains the figure, the method and its limits.
 
 ## Approach
@@ -46,19 +55,20 @@ Each linked page explains the figure, the method and its limits.
 - **Four baselines** for every forecast: the model's own last estimate (deployable persistence), the last measured force (offline reference), trend extrapolation, and a reduced physiological model.
 - **Reduced physiological model.** Activation follows a neural drive estimate *u* as da/dt = (u − a)/τ, with separate time constants for rise and relaxation, and force is F(t + d) = b + k·aᵖ with an electromechanical delay *d*.
 - **Results split by phase** (force rising, steady, falling), because good performance during holds can hide poor anticipation.
-- **Detection scored against force onset,** with false alarms counted at rest and rest levels taken from a calibration recording (stage 3).
+- **Detection scored against force onset,** with false alarms counted at rest and rest levels taken from a calibration recording (stage 3), and against the phases of a whole movement (stage 4).
 
 ## Leakage checklist
 
 | Step | Fitted on | Uses samples after *t*? |
 |---|---|---|
-| sEMG features and activity (band-pass, RMS) | none | No: causal filter and trailing window, confirmed by a look-ahead test in `hyser.ipynb` and `putemg_force.ipynb` |
+| sEMG features and activity (band-pass, RMS) | none | No: causal filter and trailing window, confirmed by a look-ahead test in `hyser.ipynb`, `putemg_force.ipynb` and `way_eeg_gal.ipynb` |
 | Electrode exclusion | each trial (stage 1) or session 1 (stages 2 and 3) | No labels used |
 | z-score, PCA, ridge weights and penalty | calibration recording | Penalty chosen by blocked cross-validation with a gap |
 | Trend damping, physiological model | calibration recording | No |
 | Phase labels (rising, steady, falling) | measured force of the test recording | Yes, but only to split the evaluation, never as model input |
 | Detector rest levels | calibration recording | No |
 | Force onsets and rest periods | measured force of the test recording | Yes, but only to score the detector, never as its input |
+| Trial events and movement phases (stage 4) | the dataset authors' event times | Yes, but only to define the grip force target, split the evaluation and score the detector, never as model input |
 | Error scale | test recording | Same divisor for every model |
 | Baseline 2 (measured force) | none | No, but it needs a force sensor |
 
@@ -84,6 +94,8 @@ Each linked page explains the figure, the method and its limits.
 | `download_hyser.py` | Downloads the Hyser files used by both notebooks |
 | `putemg_force.ipynb` | putEMG-Force, all 44 participants: Figures 9 to 12 |
 | `download_putemg_force.py` | Downloads the putEMG-Force recordings |
+| `way_eeg_gal.ipynb` | WAY-EEG-GAL, all 12 participants: Figures 13 to 15 |
+| `download_way_eeg_gal.py` | Downloads the WAY-EEG-GAL files |
 | `cemhsey.ipynb` | CEMHSEY analyses (with a Hyser comparison): Figures 4 and 5 |
 | `Tests/` | One page per figure with its explanation |
 | `figures/` | Figure images |
@@ -92,9 +104,9 @@ Each linked page explains the figure, the method and its limits.
 
 ## How to run
 
-1. Download the data (not included here, see below) into a `data/` folder. For Hyser, `python download_hyser.py` gets the random task of all 20 participants, both sessions (about 2 GB, into `data/hyser/`). For putEMG-Force, `python download_putemg_force.py` gets the force recordings of all 44 participants (about 20 GB, into `data/putemg_force/`).
+1. Download the data (not included here, see below) into a `data/` folder. For Hyser, `python download_hyser.py` gets the random task of all 20 participants, both sessions (about 2 GB, into `data/hyser/`). For putEMG-Force, `python download_putemg_force.py` gets the force recordings of all 44 participants (about 20 GB, into `data/putemg_force/`). For WAY-EEG-GAL, `python download_way_eeg_gal.py` gets the 12 participant files (10.3 GB, into `data/way_eeg_gal/`).
 2. `pip install -r requirements.txt`
-3. Set `HYSER_DIR`, `HYSER_RANDOM`, `PUTEMG_FORCE` and `CEM_DIR` in the first cell of each notebook (or as environment variables), then run all cells from the repository folder. `hyser.ipynb` takes about a minute; `hyser_multisubject.ipynb` takes about 15 s per participant the first time and keeps the results of each person in `results/multisubject/`; `putemg_force.ipynb` takes about 25 s per participant the first time and keeps them in `results/putemg/`; `cemhsey.ipynb` takes a few minutes the first time while it extracts features from the CEMHSEY files.
+3. Set `HYSER_DIR`, `HYSER_RANDOM`, `PUTEMG_FORCE`, `WAY_EEG_GAL` and `CEM_DIR` in the first cell of each notebook (or as environment variables), then run all cells from the repository folder. `hyser.ipynb` takes about a minute; `hyser_multisubject.ipynb` takes about 15 s per participant the first time and keeps the results of each person in `results/multisubject/`; `putemg_force.ipynb` takes about 25 s per participant the first time and keeps them in `results/putemg/`; `way_eeg_gal.ipynb` takes about 20 s per participant the first time and keeps them in `results/way/`; `cemhsey.ipynb` takes a few minutes the first time while it extracts features from the CEMHSEY files.
 
 ## Data
 
@@ -109,6 +121,12 @@ Each linked page explains the figure, the method and its limits.
 - putEMG and putEMG-Force datasets. https://biolab.put.poznan.pl/putemg-dataset/
 - Kaczmarek P, Mańkowski T, Tomczyński J. putEMG—A surface electromyography hand gesture recognition dataset. *Sensors* 19, 3548 (2019). https://doi.org/10.3390/s19163548
 - Licence: CC BY-NC 4.0.
+
+**WAY-EEG-GAL** (Umeå University). 12 participants grasped an object between thumb and index finger, lifted it, held it and put it back, in 9 series of 28 or 34 trials each (3,528 trials with sEMG and force); the weight (165, 330 or 660 g) and the contact surface (sandpaper, suede or silk) changed between trials without warning. sEMG of five muscles (anterior deltoid, brachioradialis, flexor digitorum, common extensor digitorum, first dorsal interosseous) at 4 kHz, force and torque of the index and thumb contact plates at 500 Hz, and event times for each trial. The EEG in the dataset is not used here.
+
+- Luciw MD, Jarocka E, Edin BB. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and friction. *Scientific Data* 1, 140047 (2014). https://doi.org/10.1038/sdata.2014.47
+- Dataset: figshare collection. https://doi.org/10.6084/m9.figshare.988376
+- Licence: CC BY 4.0.
 
 **CEMHSEY** (ConsecutivE Multi-day High-density Surface ElectromyographY). 320-channel forearm HD-sEMG (five 8 × 8 grids, 2048 Hz) over 11 consecutive days, with electrodes re-applied each day. Used here: GESTURE sub-dataset (11 cued hand and wrist gestures, no force), subject 1, days 1 and 2, five trials per day.
 
