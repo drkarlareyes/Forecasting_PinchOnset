@@ -1,0 +1,1815 @@
+{
+ "participants": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+ "trials": 3528,
+ "onsets": {
+  "AD": {
+   "vs_contact_ms": {
+    "median": -1205.75,
+    "iqr": [-1394.0, -920.9]
+   },
+   "vs_hand_start_ms": {
+    "median": -137.5,
+    "iqr": [-179.0, -114.8]
+   },
+   "people_after_hand_start": 0,
+   "trials_with_onset_median": 0.99
+  },
+  "BR": {
+   "vs_contact_ms": {
+    "median": -1163.75,
+    "iqr": [-1309.8, -858.2]
+   },
+   "vs_hand_start_ms": {
+    "median": -104.0,
+    "iqr": [-139.1, -86.9]
+   },
+   "people_after_hand_start": 0,
+   "trials_with_onset_median": 0.9475
+  },
+  "FD": {
+   "vs_contact_ms": {
+    "median": -474.5,
+    "iqr": [-611.6, -321.2]
+   },
+   "vs_hand_start_ms": {
+    "median": 610.5,
+    "iqr": [90.0, 916.1]
+   },
+   "people_after_hand_start": 11,
+   "trials_with_onset_median": 0.7450000000000001
+  },
+  "ED": {
+   "vs_contact_ms": {
+    "median": -1116.75,
+    "iqr": [-1210.5, -795.2]
+   },
+   "vs_hand_start_ms": {
+    "median": -61.5,
+    "iqr": [-80.0, 101.0]
+   },
+   "people_after_hand_start": 4,
+   "trials_with_onset_median": 0.99
+  },
+  "FDI": {
+   "vs_contact_ms": {
+    "median": -820.5,
+    "iqr": [-911.8, -738.8]
+   },
+   "vs_hand_start_ms": {
+    "median": 82.0,
+    "iqr": [33.1, 221.0]
+   },
+   "people_after_hand_start": 10,
+   "trials_with_onset_median": 0.997
+  }
+ },
+ "events_vs_contact": {
+  "cue": {
+   "median_ms": -1469.0,
+   "iqr_ms": [-1710.5, -1145.5]
+  },
+  "hand_start": {
+   "median_ms": -1044.5,
+   "iqr_ms": [-1167.8, -790.0]
+  },
+  "lift_off": {
+   "median_ms": 437.0,
+   "iqr_ms": [340.8, 539.8]
+  }
+ },
+ "burst_after_contact": {
+  "fdi_half_rise_after_contact_ms": {
+   "median": 105.0,
+   "iqr": [97.5, 162.5]
+  },
+  "grip_force_half_rise_after_contact_ms": {
+   "median": 225.0,
+   "iqr": [195.0, 270.0]
+  },
+  "people_fdi_before_grip_force": 11
+ },
+ "detector": {
+  "k3_c10": {
+   "on_fraction_median": {
+    "hand at rest": 0.005,
+    "reach": 0.284,
+    "last 200 ms before contact": 0.721,
+    "grip, lift and hold": 0.906,
+    "release and return": 0.306
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.002, 0.011, 0.004, 0.015, 0.003, 0.018, 0.015, 0.005, 0.003, 0.015, 0.002, 0.002],
+    "reach": [0.452, 0.674, 0.452, 0.992, 0.057, 0.164, 0.318, 0.24, 0.216, 0.696, 0.142, 0.251],
+    "last 200 ms before contact": [0.697, 0.998, 0.841, 1.0, 0.076, 0.539, 0.572, 0.331, 0.745, 0.991, 0.479, 0.77],
+    "grip, lift and hold": [0.993, 1.0, 0.615, 0.97, 0.111, 0.819, 0.97, 0.549, 0.959, 0.989, 0.509, 0.854],
+    "release and return": [0.282, 0.701, 0.225, 0.509, 0.064, 0.268, 0.376, 0.419, 0.247, 0.554, 0.104, 0.33]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.061,
+    "hand at rest": 0.278,
+    "reach": 0.512,
+    "last 200 ms before contact": 0.051,
+    "after contact": 0.085,
+    "no firing": 0.013
+   },
+   "rest_false_alarms_per_min": {
+    "median": 4.12,
+    "range": [1.39, 16.36]
+   },
+   "first_firing_vs_contact_ms_median": -638.5,
+   "people_with_firings": 12
+  },
+  "k3_c25": {
+   "on_fraction_median": {
+    "hand at rest": 0.003,
+    "reach": 0.172,
+    "last 200 ms before contact": 0.51,
+    "grip, lift and hold": 0.888,
+    "release and return": 0.289
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.001, 0.008, 0.001, 0.008, 0.001, 0.006, 0.007, 0.003, 0.002, 0.011, 0.001, 0.001],
+    "reach": [0.293, 0.508, 0.274, 0.971, 0.026, 0.065, 0.171, 0.174, 0.11, 0.569, 0.073, 0.11],
+    "last 200 ms before contact": [0.523, 0.994, 0.677, 1.0, 0.029, 0.335, 0.37, 0.205, 0.497, 0.97, 0.298, 0.554],
+    "grip, lift and hold": [0.988, 1.0, 0.537, 0.958, 0.083, 0.783, 0.959, 0.517, 0.951, 0.985, 0.449, 0.825],
+    "release and return": [0.274, 0.679, 0.194, 0.5, 0.04, 0.259, 0.353, 0.386, 0.231, 0.531, 0.065, 0.304]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.049,
+    "hand at rest": 0.15,
+    "reach": 0.422,
+    "last 200 ms before contact": 0.085,
+    "after contact": 0.247,
+    "no firing": 0.048
+   },
+   "rest_false_alarms_per_min": {
+    "median": 1.37,
+    "range": [0.33, 11.64]
+   },
+   "first_firing_vs_contact_ms_median": -288.0,
+   "people_with_firings": 12
+  },
+  "k3_c50": {
+   "on_fraction_median": {
+    "hand at rest": 0.002,
+    "reach": 0.08,
+    "last 200 ms before contact": 0.221,
+    "grip, lift and hold": 0.865,
+    "release and return": 0.272
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.004, 0.0, 0.003, 0.0, 0.003, 0.003, 0.002, 0.001, 0.008, 0.0, 0.001],
+    "reach": [0.127, 0.232, 0.151, 0.908, 0.01, 0.012, 0.061, 0.098, 0.037, 0.327, 0.028, 0.038],
+    "last 200 ms before contact": [0.253, 0.825, 0.37, 1.0, 0.007, 0.099, 0.177, 0.084, 0.188, 0.828, 0.122, 0.273],
+    "grip, lift and hold": [0.977, 0.997, 0.467, 0.946, 0.053, 0.746, 0.942, 0.485, 0.938, 0.977, 0.382, 0.792],
+    "release and return": [0.269, 0.652, 0.152, 0.493, 0.019, 0.243, 0.339, 0.33, 0.218, 0.5, 0.035, 0.275]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.037,
+    "hand at rest": 0.056,
+    "reach": 0.291,
+    "last 200 ms before contact": 0.085,
+    "after contact": 0.427,
+    "no firing": 0.104
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.45,
+    "range": [0.0, 4.56]
+   },
+   "first_firing_vs_contact_ms_median": 61.0,
+   "people_with_firings": 12
+  },
+  "k5_c10": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.009,
+    "last 200 ms before contact": 0.033,
+    "grip, lift and hold": 0.555,
+    "release and return": 0.099
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.002, 0.0, 0.004, 0.0, 0.0, 0.0, 0.001, 0.001, 0.001, 0.0, 0.0],
+    "reach": [0.0, 0.116, 0.033, 0.887, 0.002, 0.001, 0.004, 0.026, 0.004, 0.112, 0.002, 0.013],
+    "last 200 ms before contact": [0.029, 0.66, 0.036, 1.0, 0.002, 0.011, 0.039, 0.013, 0.022, 0.443, 0.001, 0.108],
+    "grip, lift and hold": [0.671, 0.885, 0.031, 0.642, 0.012, 0.46, 0.854, 0.278, 0.803, 0.584, 0.043, 0.526],
+    "release and return": [0.13, 0.34, 0.03, 0.321, 0.003, 0.073, 0.078, 0.137, 0.053, 0.254, 0.008, 0.12]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.005,
+    "hand at rest": 0.069,
+    "reach": 0.23,
+    "last 200 ms before contact": 0.062,
+    "after contact": 0.475,
+    "no firing": 0.159
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.46,
+    "range": [0.0, 5.47]
+   },
+   "first_firing_vs_contact_ms_median": 81.0,
+   "people_with_firings": 12
+  },
+  "k5_c25": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.005,
+    "last 200 ms before contact": 0.005,
+    "grip, lift and hold": 0.508,
+    "release and return": 0.089
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.001, 0.0, 0.001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "reach": [0.0, 0.033, 0.021, 0.663, 0.001, 0.0, 0.002, 0.014, 0.002, 0.06, 0.0, 0.007],
+    "last 200 ms before contact": [0.004, 0.348, 0.005, 1.0, 0.002, 0.0, 0.021, 0.003, 0.002, 0.313, 0.0, 0.067],
+    "grip, lift and hold": [0.63, 0.855, 0.014, 0.588, 0.008, 0.389, 0.838, 0.258, 0.777, 0.527, 0.034, 0.488],
+    "release and return": [0.113, 0.306, 0.02, 0.284, 0.001, 0.062, 0.073, 0.11, 0.048, 0.205, 0.003, 0.106]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.003,
+    "hand at rest": 0.024,
+    "reach": 0.168,
+    "last 200 ms before contact": 0.047,
+    "after contact": 0.509,
+    "no firing": 0.25
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.18,
+    "range": [0.0, 1.34]
+   },
+   "first_firing_vs_contact_ms_median": 113.0,
+   "people_with_firings": 12
+  },
+  "k5_c50": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.002,
+    "last 200 ms before contact": 0.0,
+    "grip, lift and hold": 0.452,
+    "release and return": 0.074
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.0, 0.0, 0.001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "reach": [0.0, 0.002, 0.009, 0.351, 0.0, 0.0, 0.0, 0.006, 0.001, 0.02, 0.0, 0.003],
+    "last 200 ms before contact": [0.0, 0.057, 0.0, 0.969, 0.0, 0.0, 0.012, 0.0, 0.0, 0.144, 0.0, 0.017],
+    "grip, lift and hold": [0.589, 0.802, 0.007, 0.569, 0.005, 0.315, 0.822, 0.232, 0.753, 0.462, 0.027, 0.441],
+    "release and return": [0.1, 0.267, 0.007, 0.227, 0.0, 0.048, 0.067, 0.08, 0.047, 0.155, 0.001, 0.091]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.001,
+    "hand at rest": 0.006,
+    "reach": 0.1,
+    "last 200 ms before contact": 0.031,
+    "after contact": 0.518,
+    "no firing": 0.344
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.04,
+    "range": [0.0, 0.31]
+   },
+   "first_firing_vs_contact_ms_median": 172.75,
+   "people_with_firings": 12
+  },
+  "k8_c10": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.0,
+    "last 200 ms before contact": 0.0,
+    "grip, lift and hold": 0.017,
+    "release and return": 0.005
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "reach": [0.0, 0.001, 0.0, 0.074, 0.0, 0.0, 0.0, 0.001, 0.0, 0.001, 0.0, 0.0],
+    "last 200 ms before contact": [0.0, 0.017, 0.0, 0.602, 0.0, 0.0, 0.004, 0.0, 0.0, 0.014, 0.0, 0.0],
+    "grip, lift and hold": [0.004, 0.173, 0.0, 0.172, 0.001, 0.006, 0.454, 0.034, 0.339, 0.023, 0.002, 0.01],
+    "release and return": [0.0, 0.027, 0.001, 0.073, 0.0, 0.0, 0.01, 0.01, 0.005, 0.019, 0.0, 0.005]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.001,
+    "hand at rest": 0.003,
+    "reach": 0.041,
+    "last 200 ms before contact": 0.049,
+    "after contact": 0.321,
+    "no firing": 0.586
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.0,
+    "range": [0.0, 0.27]
+   },
+   "first_firing_vs_contact_ms_median": 292.25,
+   "people_with_firings": 12
+  },
+  "k8_c25": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.0,
+    "last 200 ms before contact": 0.0,
+    "grip, lift and hold": 0.009,
+    "release and return": 0.004
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "reach": [0.0, 0.0, 0.0, 0.013, 0.0, 0.0, 0.0, 0.0, 0.0, 0.001, 0.0, 0.0],
+    "last 200 ms before contact": [0.0, 0.003, 0.0, 0.188, 0.0, 0.0, 0.0, 0.0, 0.0, 0.008, 0.0, 0.0],
+    "grip, lift and hold": [0.002, 0.104, 0.0, 0.141, 0.0, 0.003, 0.407, 0.025, 0.303, 0.012, 0.002, 0.006],
+    "release and return": [0.0, 0.014, 0.001, 0.043, 0.0, 0.0, 0.009, 0.005, 0.005, 0.008, 0.0, 0.002]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.0,
+    "hand at rest": 0.0,
+    "reach": 0.009,
+    "last 200 ms before contact": 0.025,
+    "after contact": 0.248,
+    "no firing": 0.718
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.0,
+    "range": [0.0, 0.05]
+   },
+   "first_firing_vs_contact_ms_median": 276.75,
+   "people_with_firings": 12
+  },
+  "k8_c50": {
+   "on_fraction_median": {
+    "hand at rest": 0.0,
+    "reach": 0.0,
+    "last 200 ms before contact": 0.0,
+    "grip, lift and hold": 0.005,
+    "release and return": 0.001
+   },
+   "on_fraction_by_person": {
+    "hand at rest": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "reach": [0.0, 0.0, 0.0, 0.003, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "last 200 ms before contact": [0.0, 0.0, 0.0, 0.034, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "grip, lift and hold": [0.0, 0.045, 0.0, 0.101, 0.0, 0.001, 0.358, 0.016, 0.261, 0.007, 0.001, 0.004],
+    "release and return": [0.0, 0.003, 0.0, 0.019, 0.0, 0.0, 0.009, 0.001, 0.005, 0.003, 0.0, 0.0]
+   },
+   "first_firing_mean_share": {
+    "already on": 0.0,
+    "hand at rest": 0.0,
+    "reach": 0.002,
+    "last 200 ms before contact": 0.004,
+    "after contact": 0.154,
+    "no firing": 0.84
+   },
+   "rest_false_alarms_per_min": {
+    "median": 0.0,
+    "range": [0.0, 0.05]
+   },
+   "first_firing_vs_contact_ms_median": 403.0,
+   "people_with_firings": 9
+  }
+ },
+ "detector_minutes": {
+  "hand at rest": 256.6,
+  "reach": 41.1,
+  "last 200 ms before contact": 10.5,
+  "grip, lift and hold": 193.8,
+  "release and return": 66.6
+ },
+ "delay_of_best_prediction": {
+  "delays_ms": [-100, -90, -80, -70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300],
+  "median_ms": 125.0,
+  "iqr_ms": [87.5, 152.5],
+  "r2_at_0_median": 0.6502,
+  "r2_at_best_median": 0.66215
+ },
+ "forecast_gain_group": {
+  "baseline 1: own estimate": {
+   "rising": [
+    {
+     "horizon_ms": 30,
+     "median": -0.42,
+     "iqr": [-0.5, -0.2],
+     "people_above_zero": 1,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0015
+    },
+    {
+     "horizon_ms": 50,
+     "median": -0.51,
+     "iqr": [-0.7, -0.3],
+     "people_above_zero": 1,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0015
+    },
+    {
+     "horizon_ms": 70,
+     "median": -0.51,
+     "iqr": [-0.8, -0.2],
+     "people_above_zero": 1,
+     "people_below_zero": 9,
+     "wilcoxon_p": 0.0068
+    },
+    {
+     "horizon_ms": 100,
+     "median": -0.16,
+     "iqr": [-0.5, 0.0],
+     "people_above_zero": 1,
+     "people_below_zero": 5,
+     "wilcoxon_p": 0.1294
+    },
+    {
+     "horizon_ms": 150,
+     "median": 0.41,
+     "iqr": [0.3, 0.9],
+     "people_above_zero": 9,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.001
+    },
+    {
+     "horizon_ms": 200,
+     "median": 0.87,
+     "iqr": [0.5, 1.9],
+     "people_above_zero": 11,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "steady": [
+    {
+     "horizon_ms": 30,
+     "median": 0.07,
+     "iqr": [0.0, 0.1],
+     "people_above_zero": 8,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0098
+    },
+    {
+     "horizon_ms": 50,
+     "median": 0.12,
+     "iqr": [0.0, 0.2],
+     "people_above_zero": 8,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0103
+    },
+    {
+     "horizon_ms": 70,
+     "median": 0.14,
+     "iqr": [0.0, 0.3],
+     "people_above_zero": 8,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0127
+    },
+    {
+     "horizon_ms": 100,
+     "median": 0.18,
+     "iqr": [0.0, 0.4],
+     "people_above_zero": 9,
+     "people_below_zero": 2,
+     "wilcoxon_p": 0.0117
+    },
+    {
+     "horizon_ms": 150,
+     "median": 0.25,
+     "iqr": [0.1, 0.5],
+     "people_above_zero": 9,
+     "people_below_zero": 2,
+     "wilcoxon_p": 0.0186
+    },
+    {
+     "horizon_ms": 200,
+     "median": 0.28,
+     "iqr": [0.0, 0.6],
+     "people_above_zero": 7,
+     "people_below_zero": 3,
+     "wilcoxon_p": 0.0171
+    }
+   ],
+   "falling": [
+    {
+     "horizon_ms": 30,
+     "median": 0.11,
+     "iqr": [0.0, 0.4],
+     "people_above_zero": 7,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0098
+    },
+    {
+     "horizon_ms": 50,
+     "median": 0.28,
+     "iqr": [0.2, 0.6],
+     "people_above_zero": 10,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.001
+    },
+    {
+     "horizon_ms": 70,
+     "median": 0.48,
+     "iqr": [0.3, 0.8],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": 0.78,
+     "iqr": [0.6, 1.0],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 150,
+     "median": 0.94,
+     "iqr": [0.8, 1.5],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 200,
+     "median": 1.0,
+     "iqr": [0.7, 2.0],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "rising, same": [
+    {
+     "horizon_ms": 30,
+     "median": -0.39,
+     "iqr": [-0.5, -0.3],
+     "people_above_zero": 1,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0024
+    },
+    {
+     "horizon_ms": 50,
+     "median": -0.46,
+     "iqr": [-0.6, -0.3],
+     "people_above_zero": 1,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0034
+    },
+    {
+     "horizon_ms": 70,
+     "median": -0.45,
+     "iqr": [-0.7, -0.1],
+     "people_above_zero": 1,
+     "people_below_zero": 9,
+     "wilcoxon_p": 0.0068
+    },
+    {
+     "horizon_ms": 100,
+     "median": -0.13,
+     "iqr": [-0.3, 0.1],
+     "people_above_zero": 2,
+     "people_below_zero": 3,
+     "wilcoxon_p": 0.3311
+    },
+    {
+     "horizon_ms": 150,
+     "median": 0.6,
+     "iqr": [0.4, 1.1],
+     "people_above_zero": 11,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.001
+    },
+    {
+     "horizon_ms": 200,
+     "median": 1.07,
+     "iqr": [0.5, 1.9],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "rising, heavier": [
+    {
+     "horizon_ms": 30,
+     "median": -0.29,
+     "iqr": [-0.5, -0.1],
+     "people_above_zero": 1,
+     "people_below_zero": 7,
+     "wilcoxon_p": 0.0093
+    },
+    {
+     "horizon_ms": 50,
+     "median": -0.33,
+     "iqr": [-0.8, -0.1],
+     "people_above_zero": 1,
+     "people_below_zero": 6,
+     "wilcoxon_p": 0.0269
+    },
+    {
+     "horizon_ms": 70,
+     "median": -0.27,
+     "iqr": [-1.0, 0.0],
+     "people_above_zero": 1,
+     "people_below_zero": 5,
+     "wilcoxon_p": 0.0669
+    },
+    {
+     "horizon_ms": 100,
+     "median": -0.05,
+     "iqr": [-0.9, 0.2],
+     "people_above_zero": 1,
+     "people_below_zero": 3,
+     "wilcoxon_p": 0.3394
+    },
+    {
+     "horizon_ms": 150,
+     "median": 0.25,
+     "iqr": [0.1, 0.4],
+     "people_above_zero": 2,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0068
+    },
+    {
+     "horizon_ms": 200,
+     "median": 0.88,
+     "iqr": [0.4, 1.4],
+     "people_above_zero": 6,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0015
+    }
+   ],
+   "rising, lighter": [
+    {
+     "horizon_ms": 30,
+     "median": -0.62,
+     "iqr": [-1.1, -0.4],
+     "people_above_zero": 0,
+     "people_below_zero": 11,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -0.96,
+     "iqr": [-1.5, -0.6],
+     "people_above_zero": 0,
+     "people_below_zero": 11,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -1.14,
+     "iqr": [-1.7, -0.8],
+     "people_above_zero": 0,
+     "people_below_zero": 11,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": -1.15,
+     "iqr": [-1.5, -0.5],
+     "people_above_zero": 0,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 150,
+     "median": -0.33,
+     "iqr": [-0.7, 0.3],
+     "people_above_zero": 3,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.6221
+    },
+    {
+     "horizon_ms": 200,
+     "median": 0.24,
+     "iqr": [-0.2, 1.3],
+     "people_above_zero": 4,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.2661
+    }
+   ]
+  },
+  "baseline 2: measured force": {
+   "rising": [
+    {
+     "horizon_ms": 30,
+     "median": -21.57,
+     "iqr": [-25.2, -18.5],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -14.72,
+     "iqr": [-15.4, -12.1],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -7.29,
+     "iqr": [-10.5, -4.3],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": 0.56,
+     "iqr": [-1.8, 4.4],
+     "people_above_zero": 5,
+     "people_below_zero": 3,
+     "wilcoxon_p": 0.4238
+    },
+    {
+     "horizon_ms": 150,
+     "median": 10.65,
+     "iqr": [7.9, 12.6],
+     "people_above_zero": 11,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 200,
+     "median": 14.88,
+     "iqr": [13.9, 17.0],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "steady": [
+    {
+     "horizon_ms": 30,
+     "median": -22.89,
+     "iqr": [-26.2, -18.1],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -21.83,
+     "iqr": [-25.2, -17.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -20.75,
+     "iqr": [-24.2, -16.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": -19.15,
+     "iqr": [-22.7, -14.8],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 150,
+     "median": -16.45,
+     "iqr": [-19.7, -12.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 200,
+     "median": -14.03,
+     "iqr": [-16.8, -9.8],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "falling": [
+    {
+     "horizon_ms": 30,
+     "median": -16.37,
+     "iqr": [-18.6, -11.9],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -10.26,
+     "iqr": [-12.2, -7.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -5.42,
+     "iqr": [-7.0, -3.0],
+     "people_above_zero": 0,
+     "people_below_zero": 11,
+     "wilcoxon_p": 0.001
+    },
+    {
+     "horizon_ms": 100,
+     "median": -0.27,
+     "iqr": [-2.5, 0.6],
+     "people_above_zero": 2,
+     "people_below_zero": 5,
+     "wilcoxon_p": 0.3535
+    },
+    {
+     "horizon_ms": 150,
+     "median": 1.55,
+     "iqr": [1.1, 6.3],
+     "people_above_zero": 5,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0342
+    },
+    {
+     "horizon_ms": 200,
+     "median": 3.42,
+     "iqr": [2.4, 8.9],
+     "people_above_zero": 10,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0122
+    }
+   ],
+   "rising, same": [
+    {
+     "horizon_ms": 30,
+     "median": -20.22,
+     "iqr": [-23.3, -18.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -13.19,
+     "iqr": [-14.3, -11.0],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -6.35,
+     "iqr": [-9.5, -3.2],
+     "people_above_zero": 0,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": 1.27,
+     "iqr": [-1.4, 6.0],
+     "people_above_zero": 5,
+     "people_below_zero": 3,
+     "wilcoxon_p": 0.2334
+    },
+    {
+     "horizon_ms": 150,
+     "median": 11.63,
+     "iqr": [8.3, 13.4],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 200,
+     "median": 15.6,
+     "iqr": [14.3, 17.3],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ],
+   "rising, heavier": [
+    {
+     "horizon_ms": 30,
+     "median": -25.74,
+     "iqr": [-29.9, -21.3],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -20.08,
+     "iqr": [-22.5, -16.1],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -12.4,
+     "iqr": [-16.3, -10.9],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 100,
+     "median": -4.82,
+     "iqr": [-7.8, -1.5],
+     "people_above_zero": 0,
+     "people_below_zero": 6,
+     "wilcoxon_p": 0.0122
+    },
+    {
+     "horizon_ms": 150,
+     "median": 4.78,
+     "iqr": [1.7, 7.2],
+     "people_above_zero": 4,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.02
+    },
+    {
+     "horizon_ms": 200,
+     "median": 9.47,
+     "iqr": [6.3, 12.7],
+     "people_above_zero": 9,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.001
+    }
+   ],
+   "rising, lighter": [
+    {
+     "horizon_ms": 30,
+     "median": -25.49,
+     "iqr": [-26.6, -22.2],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 50,
+     "median": -17.39,
+     "iqr": [-18.5, -13.6],
+     "people_above_zero": 0,
+     "people_below_zero": 12,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 70,
+     "median": -8.34,
+     "iqr": [-10.7, -4.4],
+     "people_above_zero": 0,
+     "people_below_zero": 10,
+     "wilcoxon_p": 0.0015
+    },
+    {
+     "horizon_ms": 100,
+     "median": 1.97,
+     "iqr": [-0.1, 5.7],
+     "people_above_zero": 5,
+     "people_below_zero": 1,
+     "wilcoxon_p": 0.0771
+    },
+    {
+     "horizon_ms": 150,
+     "median": 13.11,
+     "iqr": [9.7, 15.8],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    },
+    {
+     "horizon_ms": 200,
+     "median": 16.2,
+     "iqr": [15.2, 18.9],
+     "people_above_zero": 12,
+     "people_below_zero": 0,
+     "wilcoxon_p": 0.0005
+    }
+   ]
+  }
+ },
+ "weight_case_minus_same": {
+  "heavier": [
+   {
+    "horizon_ms": 30,
+    "median": 0.06,
+    "people_lower": 4,
+    "wilcoxon_p": 0.3296
+   },
+   {
+    "horizon_ms": 50,
+    "median": 0.03,
+    "people_lower": 5,
+    "wilcoxon_p": 0.6221
+   },
+   {
+    "horizon_ms": 70,
+    "median": -0.04,
+    "people_lower": 7,
+    "wilcoxon_p": 0.7334
+   },
+   {
+    "horizon_ms": 100,
+    "median": -0.3,
+    "people_lower": 8,
+    "wilcoxon_p": 0.2334
+   },
+   {
+    "horizon_ms": 150,
+    "median": -0.35,
+    "people_lower": 9,
+    "wilcoxon_p": 0.042
+   },
+   {
+    "horizon_ms": 200,
+    "median": -0.38,
+    "people_lower": 9,
+    "wilcoxon_p": 0.1294
+   }
+  ],
+  "lighter": [
+   {
+    "horizon_ms": 30,
+    "median": -0.25,
+    "people_lower": 12,
+    "wilcoxon_p": 0.0005
+   },
+   {
+    "horizon_ms": 50,
+    "median": -0.43,
+    "people_lower": 12,
+    "wilcoxon_p": 0.0005
+   },
+   {
+    "horizon_ms": 70,
+    "median": -0.61,
+    "people_lower": 12,
+    "wilcoxon_p": 0.0005
+   },
+   {
+    "horizon_ms": 100,
+    "median": -1.0,
+    "people_lower": 12,
+    "wilcoxon_p": 0.0005
+   },
+   {
+    "horizon_ms": 150,
+    "median": -0.96,
+    "people_lower": 11,
+    "wilcoxon_p": 0.0049
+   },
+   {
+    "horizon_ms": 200,
+    "median": -0.76,
+    "people_lower": 10,
+    "wilcoxon_p": 0.0093
+   }
+  ]
+ },
+ "samples_per_person_median": {
+  "rising": 6090,
+  "steady": 100838,
+  "falling": 3688,
+  "rising, same": 4563,
+  "rising, heavier": 717,
+  "rising, lighter": 706
+ },
+ "per_participant": {
+  "1": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -819.0,
+    "BR": -817.0,
+    "FD": -706.0,
+    "ED": -61.5,
+    "FDI": -742.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -99.0,
+    "BR": -98.0,
+    "FD": -10.0,
+    "ED": 673.0,
+    "FDI": -29.0
+   },
+   "onset_found": {
+    "AD": 0.99,
+    "BR": 0.997,
+    "FD": 0.935,
+    "ED": 0.701,
+    "FDI": 0.997
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.0,
+     "last 200 ms before contact": 0.004,
+     "grip, lift and hold": 0.63,
+     "release and return": 0.113
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 0,
+     "reach": 0,
+     "last 200 ms before contact": 5,
+     "after contact": 252,
+     "no firing": 3
+    },
+    "first_firing_ms_median": 106.0,
+    "rest_false_alarms_per_min": 0.0,
+    "minutes": {
+     "hand at rest": 25.22,
+     "reach": 2.3,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 14.32,
+     "release and return": 4.47
+    }
+   },
+   "best_delay_ms": 120,
+   "r2_best_delay": 0.8053,
+   "r2_zero_delay": 0.7742,
+   "gain_vs_baseline1": {
+    "rising": [-1.37, -2.02, -2.26, -1.31, 2.24, 2.99],
+    "steady": [0.27, 0.41, 0.51, 0.58, 0.57, 0.59],
+    "falling": [0.52, 0.85, 1.22, 1.81, 2.68, 3.47],
+    "rising, same": [-1.35, -1.97, -2.17, -1.07, 2.65, 3.45],
+    "rising, heavier": [-1.33, -2.0, -2.4, -2.16, 0.29, 1.55],
+    "rising, lighter": [-1.61, -2.4, -2.78, -2.03, 1.36, 1.16]
+   }
+  },
+  "2": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1468.0,
+    "BR": -1420.0,
+    "FD": -598.5,
+    "ED": -1360.0,
+    "FDI": -1099.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -287.0,
+    "BR": -244.5,
+    "FD": 551.5,
+    "ED": -175.0,
+    "FDI": 62.5
+   },
+   "onset_found": {
+    "AD": 0.99,
+    "BR": 1.0,
+    "FD": 0.939,
+    "ED": 1.0,
+    "FDI": 0.993
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.001,
+     "reach": 0.033,
+     "last 200 ms before contact": 0.348,
+     "grip, lift and hold": 0.855,
+     "release and return": 0.306
+    },
+    "first_firing": {
+     "already on": 7,
+     "hand at rest": 14,
+     "reach": 63,
+     "last 200 ms before contact": 76,
+     "after contact": 106,
+     "no firing": 0
+    },
+    "first_firing_ms_median": -50.0,
+    "rest_false_alarms_per_min": 0.71,
+    "minutes": {
+     "hand at rest": 22.63,
+     "reach": 4.27,
+     "last 200 ms before contact": 0.89,
+     "grip, lift and hold": 18.38,
+     "release and return": 5.93
+    }
+   },
+   "best_delay_ms": 130,
+   "r2_best_delay": 0.6874,
+   "r2_zero_delay": 0.6773,
+   "gain_vs_baseline1": {
+    "rising": [-0.32, -0.46, -0.55, -0.51, -0.08, 0.51],
+    "steady": [0.01, 0.02, 0.02, 0.01, -0.0, -0.04],
+    "falling": [0.4, 0.62, 0.77, 0.82, 0.54, 0.14],
+    "rising, same": [-0.29, -0.42, -0.47, -0.41, -0.01, 0.52],
+    "rising, heavier": [-0.43, -0.66, -0.82, -0.91, -0.27, 0.77],
+    "rising, lighter": [-0.42, -0.65, -0.82, -0.91, -0.44, 0.34]
+   }
+  },
+  "3": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -852.0,
+    "BR": -729.0,
+    "FD": -589.0,
+    "ED": -385.0,
+    "FDI": -591.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -136.0,
+    "BR": -51.5,
+    "FD": 102.0,
+    "ED": 325.0,
+    "FDI": 117.0
+   },
+   "onset_found": {
+    "AD": 0.986,
+    "BR": 0.956,
+    "FD": 0.577,
+    "ED": 0.973,
+    "FDI": 0.98
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.021,
+     "last 200 ms before contact": 0.005,
+     "grip, lift and hold": 0.014,
+     "release and return": 0.02
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 1,
+     "reach": 45,
+     "last 200 ms before contact": 3,
+     "after contact": 41,
+     "no firing": 170
+    },
+    "first_firing_ms_median": -306.0,
+    "rest_false_alarms_per_min": 0.04,
+    "minutes": {
+     "hand at rest": 22.62,
+     "reach": 2.29,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 13.61,
+     "release and return": 4.67
+    }
+   },
+   "best_delay_ms": 150,
+   "r2_best_delay": 0.5573,
+   "r2_zero_delay": 0.5281,
+   "gain_vs_baseline1": {
+    "rising": [-0.47, -0.47, -0.26, 0.15, 0.41, 0.35],
+    "steady": [0.19, 0.27, 0.33, 0.36, 0.33, 0.19],
+    "falling": [0.04, 0.18, 0.44, 0.82, 0.95, 1.24],
+    "rising, same": [-0.45, -0.39, -0.09, 0.43, 0.68, 0.55],
+    "rising, heavier": [-0.28, -0.35, -0.35, -0.21, 0.08, 0.02],
+    "rising, lighter": [-1.04, -1.4, -1.54, -1.52, -1.54, -1.39]
+   }
+  },
+  "4": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -859.0,
+    "BR": -838.0,
+    "FD": -651.0,
+    "ED": -819.0,
+    "FDI": -803.5
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -103.0,
+    "BR": -93.0,
+    "FD": 54.0,
+    "ED": -78.0,
+    "FDI": -66.0
+   },
+   "onset_found": {
+    "AD": 0.99,
+    "BR": 0.99,
+    "FD": 0.997,
+    "ED": 0.99,
+    "FDI": 1.0
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.001,
+     "reach": 0.663,
+     "last 200 ms before contact": 1.0,
+     "grip, lift and hold": 0.588,
+     "release and return": 0.284
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 25,
+     "reach": 235,
+     "last 200 ms before contact": 0,
+     "after contact": 0,
+     "no firing": 0
+    },
+    "first_firing_ms_median": -543.0,
+    "rest_false_alarms_per_min": 1.34,
+    "minutes": {
+     "hand at rest": 18.64,
+     "reach": 2.29,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 15.27,
+     "release and return": 5.37
+    }
+   },
+   "best_delay_ms": 300,
+   "r2_best_delay": 0.5189,
+   "r2_zero_delay": 0.5077,
+   "gain_vs_baseline1": {
+    "rising": [-0.02, -0.01, 0.01, 0.04, 0.14, 0.31],
+    "steady": [0.15, 0.23, 0.31, 0.42, 0.57, 0.68],
+    "falling": [0.06, 0.19, 0.37, 0.71, 1.39, 2.03],
+    "rising, same": [0.02, 0.06, 0.11, 0.2, 0.38, 0.59],
+    "rising, heavier": [0.09, 0.15, 0.19, 0.17, 0.13, 0.36],
+    "rising, lighter": [-0.42, -0.65, -0.85, -1.05, -1.24, -1.24]
+   }
+  },
+  "5": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1317.0,
+    "BR": -1141.0,
+    "FD": -337.0,
+    "ED": -1137.0,
+    "FDI": -828.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -227.0,
+    "BR": -71.5,
+    "FD": 704.0,
+    "ED": -71.5,
+    "FDI": 195.0
+   },
+   "onset_found": {
+    "AD": 0.973,
+    "BR": 0.939,
+    "FD": 0.446,
+    "ED": 0.993,
+    "FDI": 0.786
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.001,
+     "last 200 ms before contact": 0.002,
+     "grip, lift and hold": 0.008,
+     "release and return": 0.001
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 1,
+     "reach": 4,
+     "last 200 ms before contact": 0,
+     "after contact": 27,
+     "no firing": 234
+    },
+    "first_firing_ms_median": 602.5,
+    "rest_false_alarms_per_min": 0.05,
+    "minutes": {
+     "hand at rest": 21.15,
+     "reach": 3.78,
+     "last 200 ms before contact": 0.89,
+     "grip, lift and hold": 16.07,
+     "release and return": 5.39
+    }
+   },
+   "best_delay_ms": 80,
+   "r2_best_delay": 0.539,
+   "r2_zero_delay": 0.5344,
+   "gain_vs_baseline1": {
+    "rising": [0.12, 0.2, 0.27, 0.34, 0.38, 0.43],
+    "steady": [0.06, 0.09, 0.11, 0.13, 0.11, 0.06],
+    "falling": [-0.0, 0.02, 0.09, 0.26, 0.56, 0.73],
+    "rising, same": [0.13, 0.23, 0.32, 0.41, 0.52, 0.65],
+    "rising, heavier": [0.18, 0.24, 0.26, 0.24, 0.12, -0.13],
+    "rising, lighter": [-0.09, -0.11, -0.11, -0.13, -0.21, -0.19]
+   }
+  },
+  "6": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1147.0,
+    "BR": -1157.0,
+    "FD": -377.5,
+    "ED": -1096.5,
+    "FDI": -429.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -114.0,
+    "BR": -130.0,
+    "FD": 669.5,
+    "ED": -86.0,
+    "FDI": 587.5
+   },
+   "onset_found": {
+    "AD": 0.997,
+    "BR": 0.888,
+    "FD": 0.49,
+    "ED": 0.993,
+    "FDI": 0.966
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.0,
+     "last 200 ms before contact": 0.0,
+     "grip, lift and hold": 0.389,
+     "release and return": 0.062
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 0,
+     "reach": 1,
+     "last 200 ms before contact": 0,
+     "after contact": 185,
+     "no firing": 74
+    },
+    "first_firing_ms_median": 329.0,
+    "rest_false_alarms_per_min": 0.0,
+    "minutes": {
+     "hand at rest": 23.52,
+     "reach": 3.53,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 16.33,
+     "release and return": 5.85
+    }
+   },
+   "best_delay_ms": 60,
+   "r2_best_delay": 0.7691,
+   "r2_zero_delay": 0.7653,
+   "gain_vs_baseline1": {
+    "rising": [-0.18, -0.22, -0.19, -0.03, 0.28, 0.53],
+    "steady": [-0.02, -0.02, -0.01, 0.03, 0.16, 0.33],
+    "falling": [0.19, 0.36, 0.53, 0.74, 0.86, 0.75],
+    "rising, same": [-0.15, -0.17, -0.13, 0.0, 0.3, 0.51],
+    "rising, heavier": [-0.21, -0.2, -0.08, 0.1, 0.3, 0.35],
+    "rising, lighter": [-0.29, -0.42, -0.47, -0.3, -0.08, 0.71]
+   }
+  },
+  "7": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1440.0,
+    "BR": -1336.0,
+    "FD": 76.0,
+    "ED": -1248.0,
+    "FDI": -1119.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -194.0,
+    "BR": -169.0,
+    "FD": 1135.5,
+    "ED": -62.0,
+    "FDI": 95.0
+   },
+   "onset_found": {
+    "AD": 0.99,
+    "BR": 0.895,
+    "FD": 0.81,
+    "ED": 0.963,
+    "FDI": 0.997
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.002,
+     "last 200 ms before contact": 0.021,
+     "grip, lift and hold": 0.838,
+     "release and return": 0.073
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 2,
+     "reach": 7,
+     "last 200 ms before contact": 4,
+     "after contact": 246,
+     "no firing": 1
+    },
+    "first_firing_ms_median": 142.0,
+    "rest_false_alarms_per_min": 0.1,
+    "minutes": {
+     "hand at rest": 20.5,
+     "reach": 4.07,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 17.91,
+     "release and return": 5.96
+    }
+   },
+   "best_delay_ms": 70,
+   "r2_best_delay": 0.8585,
+   "r2_zero_delay": 0.8507,
+   "gain_vs_baseline1": {
+    "rising": [-0.42, -0.54, -0.46, 0.06, 1.4, 2.35],
+    "steady": [-0.0, -0.01, -0.03, -0.06, -0.14, -0.21],
+    "falling": [0.08, 0.22, 0.39, 0.64, 0.94, 0.79],
+    "rising, same": [-0.42, -0.53, -0.44, 0.07, 1.41, 2.38],
+    "rising, heavier": [-0.3, -0.32, -0.19, 0.22, 1.11, 1.75],
+    "rising, lighter": [-0.65, -0.96, -1.01, -0.21, 1.99, 3.03]
+   }
+  },
+  "8": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -941.5,
+    "BR": -865.0,
+    "FD": -571.5,
+    "ED": -724.0,
+    "FDI": -729.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -139.0,
+    "BR": -92.0,
+    "FD": 147.0,
+    "ED": 52.0,
+    "FDI": 35.5
+   },
+   "onset_found": {
+    "AD": 0.993,
+    "BR": 0.963,
+    "FD": 0.156,
+    "ED": 0.99,
+    "FDI": 1.0
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.014,
+     "last 200 ms before contact": 0.003,
+     "grip, lift and hold": 0.258,
+     "release and return": 0.11
+    },
+    "first_firing": {
+     "already on": 1,
+     "hand at rest": 8,
+     "reach": 51,
+     "last 200 ms before contact": 4,
+     "after contact": 148,
+     "no firing": 54
+    },
+    "first_firing_ms_median": 120.0,
+    "rest_false_alarms_per_min": 0.42,
+    "minutes": {
+     "hand at rest": 19.07,
+     "reach": 2.65,
+     "last 200 ms before contact": 0.89,
+     "grip, lift and hold": 15.26,
+     "release and return": 4.74
+    }
+   },
+   "best_delay_ms": 160,
+   "r2_best_delay": 0.6008,
+   "r2_zero_delay": 0.5701,
+   "gain_vs_baseline1": {
+    "rising": [-0.69, -0.94, -0.97, -0.57, 0.71, 1.32],
+    "steady": [-0.03, -0.05, -0.08, -0.12, -0.18, -0.19],
+    "falling": [0.13, 0.17, 0.22, 0.34, 0.59, 0.64],
+    "rising, same": [-0.58, -0.75, -0.71, -0.26, 0.97, 1.54],
+    "rising, heavier": [-0.8, -1.14, -1.29, -1.04, 0.28, 0.91],
+    "rising, lighter": [-1.29, -1.91, -2.27, -2.11, -0.61, 0.14]
+   }
+  },
+  "9": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1210.5,
+    "BR": -1184.0,
+    "FD": -151.0,
+    "ED": -902.5,
+    "FDI": -880.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -115.0,
+    "BR": -135.0,
+    "FD": 912.0,
+    "ED": 248.0,
+    "FDI": 69.0
+   },
+   "onset_found": {
+    "AD": 0.973,
+    "BR": 0.935,
+    "FD": 0.939,
+    "ED": 1.0,
+    "FDI": 0.997
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.002,
+     "last 200 ms before contact": 0.002,
+     "grip, lift and hold": 0.777,
+     "release and return": 0.048
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 7,
+     "reach": 5,
+     "last 200 ms before contact": 5,
+     "after contact": 239,
+     "no firing": 4
+    },
+    "first_firing_ms_median": 101.0,
+    "rest_false_alarms_per_min": 0.41,
+    "minutes": {
+     "hand at rest": 21.76,
+     "reach": 3.75,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 15.31,
+     "release and return": 5.9
+    }
+   },
+   "best_delay_ms": 90,
+   "r2_best_delay": 0.8622,
+   "r2_zero_delay": 0.8463,
+   "gain_vs_baseline1": {
+    "rising": [-0.76, -1.11, -1.12, -0.3, 1.89, 2.86],
+    "steady": [0.14, 0.23, 0.33, 0.46, 0.7, 1.0],
+    "falling": [0.05, 0.34, 0.84, 1.72, 2.26, 2.01],
+    "rising, same": [-0.74, -1.05, -1.01, -0.1, 2.22, 3.22],
+    "rising, heavier": [-0.52, -0.87, -1.03, -0.68, 0.19, 0.84],
+    "rising, lighter": [-1.08, -1.71, -2.01, -1.24, 1.77, 2.55]
+   }
+  },
+  "10": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1201.0,
+    "BR": -1170.5,
+    "FD": -846.5,
+    "ED": -1145.5,
+    "FDI": -938.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -174.0,
+    "BR": -151.5,
+    "FD": 44.5,
+    "ED": -121.0,
+    "FDI": 26.0
+   },
+   "onset_found": {
+    "AD": 0.983,
+    "BR": 0.986,
+    "FD": 0.85,
+    "ED": 1.0,
+    "FDI": 0.983
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.06,
+     "last 200 ms before contact": 0.313,
+     "grip, lift and hold": 0.527,
+     "release and return": 0.205
+    },
+    "first_firing": {
+     "already on": 1,
+     "hand at rest": 11,
+     "reach": 90,
+     "last 200 ms before contact": 28,
+     "after contact": 119,
+     "no firing": 11
+    },
+    "first_firing_ms_median": -57.0,
+    "rest_false_alarms_per_min": 0.65,
+    "minutes": {
+     "hand at rest": 18.52,
+     "reach": 3.48,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 16.82,
+     "release and return": 5.27
+    }
+   },
+   "best_delay_ms": 150,
+   "r2_best_delay": 0.6369,
+   "r2_zero_delay": 0.6231,
+   "gain_vs_baseline1": {
+    "rising": [-0.43, -0.61, -0.66, -0.48, 0.33, 1.21],
+    "steady": [0.09, 0.14, 0.18, 0.24, 0.34, 0.42],
+    "falling": [0.57, 0.92, 1.19, 1.42, 1.7, 2.29],
+    "rising, same": [-0.36, -0.5, -0.52, -0.3, 0.53, 1.5],
+    "rising, heavier": [-0.14, -0.12, -0.03, 0.25, 0.77, 1.39],
+    "rising, lighter": [-0.85, -1.28, -1.55, -1.59, -0.65, 0.06]
+   }
+  },
+  "11": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1433.0,
+    "BR": -1371.0,
+    "FD": -336.0,
+    "ED": -1349.0,
+    "FDI": -813.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -123.0,
+    "BR": -66.0,
+    "FD": 929.0,
+    "ED": -40.0,
+    "FDI": 381.0
+   },
+   "onset_found": {
+    "AD": 0.99,
+    "BR": 0.854,
+    "FD": 0.68,
+    "ED": 0.956,
+    "FDI": 0.997
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.0,
+     "last 200 ms before contact": 0.0,
+     "grip, lift and hold": 0.034,
+     "release and return": 0.003
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 0,
+     "reach": 4,
+     "last 200 ms before contact": 0,
+     "after contact": 69,
+     "no firing": 193
+    },
+    "first_firing_ms_median": 429.0,
+    "rest_false_alarms_per_min": 0.0,
+    "minutes": {
+     "hand at rest": 19.45,
+     "reach": 4.39,
+     "last 200 ms before contact": 0.89,
+     "grip, lift and hold": 16.74,
+     "release and return": 6.21
+    }
+   },
+   "best_delay_ms": 290,
+   "r2_best_delay": 0.6269,
+   "r2_zero_delay": 0.5933,
+   "gain_vs_baseline1": {
+    "rising": [-0.26, -0.31, -0.25, -0.01, 0.42, 0.48],
+    "steady": [0.12, 0.2, 0.27, 0.36, 0.46, 0.54],
+    "falling": [-0.1, -0.01, 0.22, 0.65, 1.01, 0.98],
+    "rising, same": [-0.32, -0.41, -0.38, -0.16, 0.27, 0.35],
+    "rising, heavier": [0.1, 0.25, 0.44, 0.75, 1.17, 1.33],
+    "rising, lighter": [-0.45, -0.62, -0.67, -0.52, -0.17, -0.22]
+   }
+  },
+  "12": {
+   "trials": 294,
+   "onset_vs_contact_ms": {
+    "AD": -1381.0,
+    "BR": -1301.0,
+    "FD": -277.0,
+    "ED": -1198.0,
+    "FDI": -903.0
+   },
+   "onset_vs_hand_start_ms": {
+    "AD": -173.0,
+    "BR": -110.0,
+    "FD": 928.5,
+    "ED": -61.0,
+    "FDI": 299.0
+   },
+   "onset_found": {
+    "AD": 0.986,
+    "BR": 0.911,
+    "FD": 0.526,
+    "ED": 0.925,
+    "FDI": 1.0
+   },
+   "detection_5sd_25ms": {
+    "on_fraction": {
+     "hand at rest": 0.0,
+     "reach": 0.007,
+     "last 200 ms before contact": 0.067,
+     "grip, lift and hold": 0.488,
+     "release and return": 0.106
+    },
+    "first_firing": {
+     "already on": 0,
+     "hand at rest": 5,
+     "reach": 21,
+     "last 200 ms before contact": 23,
+     "after contact": 164,
+     "no firing": 47
+    },
+    "first_firing_ms_median": 148.0,
+    "rest_false_alarms_per_min": 0.26,
+    "minutes": {
+     "hand at rest": 23.51,
+     "reach": 4.26,
+     "last 200 ms before contact": 0.87,
+     "grip, lift and hold": 17.8,
+     "release and return": 6.84
+    }
+   },
+   "best_delay_ms": 90,
+   "r2_best_delay": 0.7962,
+   "r2_zero_delay": 0.7871,
+   "gain_vs_baseline1": {
+    "rising": [-0.43, -0.63, -0.72, -0.58, 0.52, 1.73],
+    "steady": [0.04, 0.06, 0.08, 0.11, 0.17, 0.22],
+    "falling": [0.41, 0.65, 0.79, 0.89, 0.88, 1.02],
+    "rising, same": [-0.41, -0.59, -0.65, -0.47, 0.68, 1.78],
+    "rising, heavier": [-0.52, -0.78, -0.93, -0.89, 0.22, 2.08],
+    "rising, lighter": [-0.59, -0.96, -1.27, -1.52, -0.67, 1.55]
+   }
+  }
+ },
+ "settings": {
+  "horizons_ms": [30, 50, 70, 100, 150, 200],
+  "detector_k_sd": [3, 5, 8],
+  "detector_confirmation_ms": [10, 25, 50],
+  "detector_muscles": ["flexor digitorum", "first dorsal interosseous"],
+  "onset": {
+   "k_sd": 3,
+   "ms": 25
+  },
+  "bootstrap": 500,
+  "block_s": 1.0
+ }
+}
