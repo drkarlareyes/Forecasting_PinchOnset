@@ -28,4 +28,4 @@ Median R² on the new day:
 - Updating the normalisation without force helped little.
 - A short calibration with force on the new day recovered most of the performance, and keeping the day-1 data mattered when the new data were short (10 s or less).
 
-For a device, this points to a short daily calibration of 10 to 20 s that adds to the earlier ones rather than replacing them. Each recording lasts 25 s, so longer calibrations could not be tested.
+This exploratory result motivates testing a new-day calibration with force, but does not establish a ready-to-deploy daily protocol. The 10–20 s figures refer to nominal selected labeled-sample duration, not full setup/warm-up time. Retaining older data was not consistently beneficial in another dataset. Each recording lasts 25 s, so longer calibrations could not be tested.
