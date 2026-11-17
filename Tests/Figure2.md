@@ -18,8 +18,8 @@ Error reduction against baseline 1, in points of a typical press [95% interval]:
 | 200 ms | 2.6 [−0.2, 5.8] | 0.3 [−1.4, 2.1] | −0.6 [−2.5, 1.1] |
 
 - The gain over baseline 1 was small, at most 2.6 points. During force rise, the case that matters most for anticipation, the interval included zero at every horizon.
-- The gains clearly above zero were during holds (50 to 100 ms) and release (100 ms), between 0.6 and 1.6 points.
+- Within this exploratory two-trial pilot, gains whose 95% block-resampling interval excluded zero were during holds (50 to 100 ms) and release (100 ms), between 0.6 and 1.6 points.
 - Baseline 2 repeats the last measured force, which needs a force sensor. It beat the forecast at 30 ms in every phase and up to 150 ms during holds, and lost from 100 ms ahead during force rise and release.
 - The reduced physiological model (baseline 4) was worse than the EMG forecast at 150 and 200 ms during holds and at 100 to 200 ms during release, and similar elsewhere. Baseline 3 selected no trend and matched baseline 1.
 
-Persistence of the measured force is very effective during holds, while sEMG may say more about upcoming changes, which is why the results are reported by phase. The intervals reflect variation over time within two recordings of one person, not between people. The full error table is printed in `hyser.ipynb` and saved in `results/hyser.json`.
+Persistence of the measured force is very effective during holds, while sEMG may say more about upcoming changes, which is why the results are reported by phase. The intervals reflect variation over time within two recordings of one person, not between people, and are not adjusted for multiple horizons and phases. Electrode QC flags were selected using both trials before the bidirectional comparison (unsupervised test-recording information). The full error table is printed in `hyser.ipynb` and saved in `results/hyser.json`.
