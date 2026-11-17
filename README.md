@@ -2,7 +2,7 @@
 
 Muscle electrical activity starts before the force it produces. This repository tests how far that lead can be used: can a model predict finger force tens of milliseconds ahead with information that goes beyond simply repeating the last value, and how do early pinch detection and false pinches trade off?
 
-I approach the problem as an evaluation framework of eight tests (T1 to T8), run on public sEMG data in four stages. Each figure takes one test and checks whether its result would change a modelling decision.
+I use eight research questions (T1–T8) to organise exploratory analyses of four public-data stages. The repository implements subsets of these tests, not a completed or deployment-validated system.
 
 1. **Pilot, one participant per dataset** (Figures 1 to 5): five of the tests on Hyser and CEMHSEY, to see what each test can reveal.
 2. **Hyser, all 20 participants** (Figures 6 to 8): the timing and forecast tests repeated on everyone, plus a day-to-day test with the electrodes placed again.
@@ -15,7 +15,7 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8), run
 
 | Figure | T | Question | Result on public data |
 |---|---|---|---|
-| [1](Tests/Figure1.md) | Test 1 | Does EMG lead force, and by how much? | With causal processing, EMG crossed the rest threshold 22 and 41 ms before force (two trials). A real-time detector with 10 ms confirmation fired 13 and 32 ms before force; with 50 ms confirmation, after force had started. |
+| [1](Tests/Figure1.md) | Test 1 | Does EMG lead force, and by how much? | With causal processing, EMG crossed the rest threshold 22 and 41 ms before force (two trials). A *causally processed offline detector* with 10 ms confirmation fired 13 and 32 ms before the reference force threshold; with 50 ms confirmation it fired after. These timings exclude complete acquisition, computation and robotic actuation latency. |
 | [2](Tests/Figure2.md) | Test 2 | Does a forecast beat persistence, and when? | Against repeating its own last estimate (the deployable baseline), the EMG forecast was at most 2.6 points of a typical press better, and during force rise the 95% interval included zero at every horizon. Repeating the measured force, which needs a force sensor, won at 30 ms in every phase and up to 150 ms during holds. |
 | [3](Tests/Figure3.md) | Test 5 | Which calibration data identify the model? | Steady force left the EMG-to-force delay poorly identified (fit changed by 0.035 R² across 0 to 150 ms); changing force constrained it (0.16 to 0.25). A mixed calibration predicted best or as well (R² 0.70 and 0.78). |
 | [4](Tests/Figure4.md) | Test 4 | Can the task schedule alone look like anticipation? | Time since trial start alone predicted cued muscle activity with R² 0.77 to 0.91, and self-paced activity not at all (−0.03 and −0.18). |
@@ -25,7 +25,7 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8), run
 
 | Figure | T | Question | Result on public data |
 |---|---|---|---|
-| [6](Tests/Figure6.md) | Test 1 | How far ahead does sEMG carry information about force? | In all 19 participants with an active middle finger, the causal sEMG features predicted force best some time ahead rather than now: median 130 ms (IQR 105 to 195 ms; 70 ms for the pilot participant). R² on the other trial rose from 0.18 at 0 ms to 0.36 at each person's best delay (medians). |
+| [6](Tests/Figure6.md) | Test 1 | How far ahead does sEMG carry information about force? | In all 19 participants with an active middle finger, the maximum of the held-out delay profile occurred at a positive delay (test-selected, descriptive): median 130 ms (IQR 105 to 195 ms; 70 ms for the pilot participant). R² on the other trial rose from 0.18 at 0 ms to 0.36 at each person's best delay (medians). |
 | [7](Tests/Figure7.md) | Test 2 | Does the forecast beat persistence across people? | Against repeating its own estimate, the forecast's median gain during force rise was 1.4 points of a typical press at 100 ms and 3.3 to 3.7 points at 150 to 200 ms (Wilcoxon p ≤ 0.001), clear within 10 of 19 people at 150 to 200 ms. Repeating the measured force still won up to 100 ms in every phase and at all horizons during holds. |
 | [8](Tests/Figure8.md) | Test 8, Test 5 | Does a calibration survive to the next day? | No. A day-1 model fell from a median R² of 0.39 (same-day calibration) to −0.07 on day 2. Rescaling the sEMG on day 2 without force reached only 0.11. Adding 10 to 20 s of day-2 data with force to the day-1 data recovered 0.32 to 0.35; day-2 data alone needed 20 s to match. |
 
@@ -33,7 +33,7 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8), run
 
 | Figure | T | Question | Result on public data |
 |---|---|---|---|
-| [9](Tests/Figure9.md) | Test 1 | Does the delay of best prediction replicate? | Yes: median 100 ms (IQR 90 to 140 ms), positive in all 44 participants (Hyser: 130 ms). Here looking ahead raised R² only from 0.40 to 0.41 (medians), against 0.18 to 0.36 in Hyser. |
+| [9](Tests/Figure9.md) | Test 1 | Does the delay of best prediction replicate? | The maximum held-out delay-profile score occurred at a positive delay for all 44 participants (median 100 ms, IQR 90–140 ms; Hyser: 130 ms). The reported R² at the maximum (0.41 versus 0.40 at zero delay) is optimistic because the best delay was chosen on test data. |
 | [10](Tests/Figure10.md) | Test 1, Test 7, Test 8 | Can a detector see a press before force starts? | Rarely. At 5 SD and 25 ms, a rest-referenced sEMG detector caught 30% of presses with 0.44 false alarms per minute, a median of 540 ms after force onset, and none before it. The most sensitive setting caught 82% but raised 15 false alarms per minute (random firing would catch 52%), and 13% before force onset. Ring and little finger presses were caught most often (62%), thumb presses least (8%). The next session gave similar numbers. |
 | [11](Tests/Figure11.md) | Test 2 | Does the forecast beat persistence in a second dataset? | In the same direction as Hyser, but smaller: during force rise the median gain over repeating its own estimate was 0.4 points of a typical press at 100 ms (clear in 37 of 44 participants) and 0.6 at 200 ms. During release the forecast was worse up to 100 ms. |
 | [12](Tests/Figure12.md) | Test 8, Test 5 | Does a calibration survive to the next session? | No. R² fell from 0.46 (same-session calibration) to −0.75. Unlike Hyser, keeping the session-1 data hurt: new-session data alone reached 0.20 with 20 s and 0.36 with 120 s; session 1 plus the same new data reached −0.12 and 0.15. |
@@ -44,25 +44,37 @@ I approach the problem as an evaluation framework of eight tests (T1 to T8), run
 |---|---|---|---|
 | [13](Tests/Figure13.md) | Test 1 | When do the arm and hand muscles become active relative to finger contact? | The shoulder and forearm muscles switched on 60 to 140 ms before the hand started moving. The first dorsal interosseous switched on 82 ms after the hand started moving, about 820 ms before contact, at a low level; its main burst came after contact (halfway to its peak at 105 ms, grip force at 225 ms). |
 | [14](Tests/Figure14.md) | Test 7, Test 1 | Does a pinch detector stay quiet during the reach? | Not at useful settings. On the two finger muscles (flexor digitorum, first dorsal interosseous), a sensitive detector (3 SD, 10 ms) had fired before the last 200 ms preceding contact in 85% of trials, with 4.1 false alarms per minute at rest. A stricter one (5 SD, 25 ms) was rarely on at rest or during the reach, but first fired after contact (median 113 ms) or not at all in 76% of trials. At no setting did more than 8% of trials first fire in the last 200 ms before contact. |
-| [15](Tests/Figure15.md) | Test 1, Test 2 | Does the forecast help with grip force and unexpected weights? | Grip force was predicted best 125 ms ahead (IQR 88 to 152 ms), with R² rising only from 0.65 to 0.66. During force rise the forecast was worse than its own estimate up to 70 ms and better at 150 to 200 ms (0.4 and 0.9 points of a typical grip). A heavier object than in the previous trial made no clear difference; a lighter one lowered the gain at every horizon. |
+| [15](Tests/Figure15.md) | Test 1, Test 2 | Does the forecast help with grip force and unexpected weights? | The highest held-out delay-profile R² occurred at a median 125 ms (IQR 88–152 ms). The small difference between R² at zero delay (0.65) and the test-selected maximum (0.66) is descriptive, not unbiased model-selection performance. During force rise the forecast was worse than its own estimate up to 70 ms and better at 150 to 200 ms (0.4 and 0.9 points of a typical grip). A heavier object than in the previous trial made no clear difference; a lighter one lowered the gain at every horizon. |
 
 Each linked page explains the figure, the method and its limits.
 
+### Interpretation of reported numbers
+
+The figures and JSON results are **existing exploratory outputs; they have not been recalculated after this documentation review**. A reviewer should know:
+
+- **Test-selected best delays.** Figures 6, 9 and 15 identify the delay maximizing R² on held-out recordings. These positive peak delays describe the observed profiles; reporting R² at their maxima is optimistically selected. A reliable estimate of a *chosen* delay would require selecting it using calibration data only, followed by an untouched test.
+- **Electrode QC.** The Hyser pilot and 20-participant analysis combine unsupervised quality flags from both recordings in a test pair before fitting. This uses information from the test recording (even though no force labels are used), so these splits are not strictly held out. In putEMG-Force, electrode QC is based on the first-session calibration recording.
+- **Latency and detection.** The signal filtering and envelopes used in the forecast are causal. This alone does not establish usable lead after acquisition, computation, inference, confirmation, and actuation delays. The Hyser pilot's zero-phase filtering is shown only as an *offline timing comparison*.
+- **Uncertainty.** Participant-level summaries and moving-block intervals are exploratory. Reported p-values cover multiple horizons and phases without multiplicity correction; within-participant block intervals do not quantify between-person generalization.
+- **Metrics.** Evaluation uses force-derived phase labels and test-recording force scales only to score predictions, not as model inputs. The last *measured* force is an offline reference baseline requiring a force sensor; the last *estimated* force is the deployment-relevant persistence baseline when a force sensor is unavailable.
+
+For exact implementation choices and unresolved issues, see [Methodology review](METHODOLOGY_REVIEW.md) and [Limitations](Limitations.md).
+
 ## Approach
 
-- **Causal processing.** At time *t* a model only sees EMG up to *t*, and the onset timing uses the same causal processing. Normalisation, components, weights and thresholds come from calibration data only.
-- **Calibrate on one recording, test on another,** in both directions.
-- **Four baselines** for every forecast: the model's own last estimate (deployable persistence), the last measured force (offline reference), trend extrapolation, and a reduced physiological model.
+- **Causal processing.** Forecast and detector signals use forward-only filtering and trailing windows; the Hyser zero-phase trace is an explicit offline comparison. Learned scalers and model weights use calibration recordings, except for the test-informed electrode QC in the Hyser notebooks described above. The few numerical look-ahead spot checks are not an exhaustive latency audit.
+- **Cross-recording tests.** Models are calibrated on one recording and scored on another; the Hyser electrode QC and best-delay selection mean that not every comparison is a strictly untouched test.
+- **Baselines.** The pilot compares four baselines: last estimated force, last measured force (offline-only), trend extrapolation and a reduced physiological model. Stages 2–4 compare the first two persistence baselines; the latter two were **not** rerun at scale.
 - **Reduced physiological model.** Activation follows a neural drive estimate *u* as da/dt = (u − a)/τ, with separate time constants for rise and relaxation, and force is F(t + d) = b + k·aᵖ with an electromechanical delay *d*.
 - **Results split by phase** (force rising, steady, falling), because good performance during holds can hide poor anticipation.
-- **Detection scored against force onset,** with false alarms counted at rest and rest levels taken from a calibration recording (stage 3), and against the phases of a whole movement (stage 4).
+- **Detection scored against force onset** (stage 3) or movement phases (stage 4). In stage 3 the detector averages the *three largest per-channel standardized activity values at each time sample*; they are not three fixed electrodes, and the thresholds are in per-electrode standardized units, not SDs of that aggregate statistic.
 
 ## Leakage checklist
 
 | Step | Fitted on | Uses samples after *t*? |
 |---|---|---|
-| sEMG features and activity (band-pass, RMS) | none | No: causal filter and trailing window, confirmed by a look-ahead test in `hyser.ipynb`, `putemg_force.ipynb` and `way_eeg_gal.ipynb` |
-| Electrode exclusion | each trial (stage 1) or session 1 (stages 2 and 3) | No labels used |
+| sEMG features and activity (band-pass, RMS) | fixed filter coefficients | Uses forward-only filters and trailing windows; each notebook includes limited look-ahead checks, not a comprehensive timing audit |
+| Electrode exclusion | Hyser: both calibration and test recordings in stages 1–2; putEMG-Force: session-1 calibration recording | **Hyser has test-covariate leakage** (unsupervised QC flags from held-out recordings); no force labels are used in electrode exclusion |
 | z-score, PCA, ridge weights and penalty | calibration recording | Penalty chosen by blocked cross-validation with a gap |
 | Trend damping, physiological model | calibration recording | No |
 | Phase labels (rising, steady, falling) | measured force of the test recording | Yes, but only to split the evaluation, never as model input |
@@ -72,16 +84,16 @@ Each linked page explains the figure, the method and its limits.
 | Error scale | test recording | Same divisor for every model |
 | Baseline 2 (measured force) | none | No, but it needs a force sensor |
 
-## The eight tests that I developed to analyze the reseach problem. 
+## Eight research questions (some not yet implemented)
 
 | Test | Question |
 |---|---|
 | Test 1 | Does sEMG contain information before force changes? |
 | Test 2 | Does a forecast beat persistence and trend at the same horizon? |
-| Test 3 | Does recent sEMG carry the useful information (older-EMG ablation)? |
+| Test 3 | Does recent sEMG carry the useful information (older-EMG ablation)? **Not implemented** |
 | Test 4 | Is the forecast exploiting the task schedule instead of sEMG (cue-only control)? |
 | Test 5 | Do holds, ramps or mixed calibrations personalize the model best? |
-| Test 6 | Do physiological constraints or learned representations improve on simpler models? |
+| Test 6 | Do physiological constraints or learned representations improve on simpler models? **Not fully evaluated beyond pilot physiological baseline** |
 | Test 7 | How early can pinches be detected before false pinches become unacceptable? |
 | Test 8 | Do the results survive new sessions, electrode shifts, wrist movement and real processing delays? |
 
@@ -101,6 +113,7 @@ Each linked page explains the figure, the method and its limits.
 | `figures/` | Figure images |
 | `results/` | Numbers behind the figures (JSON) |
 | `Limitations.md` | What these analyses cannot show |
+| `METHODOLOGY_REVIEW.md` | Static audit, reproducibility status, and issues requiring new analyses |
 
 ## How to run
 
