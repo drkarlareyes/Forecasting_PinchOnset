@@ -1,5 +1,7 @@
 # Limitations
 
+**Static review (17 Nov 2026):** These are exploratory figures and saved numerical results. The recordings have not been reprocessed during the review. See [METHODOLOGY_REVIEW.md](METHODOLOGY_REVIEW.md) for precise implementation details and outstanding evaluation issues.
+
 These analyses are deliberately limited in scope:
 
 1. The pilot (Figures 1 to 5) examined one participant per dataset. Stages 2 to 4 cover all participants of Hyser (20), putEMG-Force (44) and WAY-EEG-GAL (12), but CEMHSEY results still come from one person.
@@ -22,3 +24,10 @@ These analyses are deliberately limited in scope:
 18. The weight-change comparisons of Figure 15 rest on about 7 s of rising grip force per participant and case.
 
 The repository is intended to demonstrate my experimental reasoning.
+
+19. The best prediction delay in Figures 6, 9 and 15 is selected by maximizing performance on the same held-out series whose peak R² is reported. These peak-delay R² values are optimistically selected; delay peaks are descriptive, not an unbiased estimate of choosing a delay for a new recording.
+20. In Hyser's pilot and multi-participant analyses, channels were excluded using quality flags from **both** trial recordings before the bidirectional train/test comparison. This introduces unsupervised test-recording information, even though it does not use test force labels.
+21. The putEMG-Force detector selects the highest three standardized electrodes **at each sample** rather than preselecting fixed electrodes. A threshold of k is applied to the mean of these three per-electrode z-scores; it is not the z-score of that combined statistic.
+22. The zero-phase Hyser result is explicitly an offline comparison, not a real-time result. Causal filtering and trailing windows address algorithmic look-ahead but do not measure complete sensor, synchronization, computation, confirmation and robotic-actuation delay.
+23. The pilot compares four forecasting baselines; the later multisubject datasets compare the own-estimate and measured-force persistence baselines, not all four. Measured-force persistence is an offline reference requiring a force sensor.
+24. The nominal duration of calibration data used by a model does not include all preparation, startup, signal-window and complete inference overhead. Short calibration findings should not be interpreted as end-to-end device readiness.
